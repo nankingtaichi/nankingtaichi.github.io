@@ -17,7 +17,7 @@ export default function Home() {
     <div className="home-page" dir="rtl">
       <div className="mycard">
         <header className="hero">
-          <h1 className="hero-title">נאנקינג טאי צ'י</h1>
+          <h1 className="hero-title">נאנקינג טאי צ'י </h1>
           <p className="hero-sub">בית הספר לאומנויות לחימה</p>
         </header>
 
