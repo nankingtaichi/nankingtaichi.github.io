@@ -22,17 +22,44 @@
   background-color: inherit;
   height: 100%;
   position: relative;
+  flex-wrap: nowrap;
 }
 
 #mynavbar {
   background-color: var(--background) !important;
   z-index: 1000;
   height: 80px;
-  position: relative;
+  position: sticky;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 @media (min-width: 768px) {
   .overlay-collapse {
     position: static; /* normal behavior on desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  #logo,
+  .navbar-brand {
+    height: unset;
+    max-width: 100%; /* don’t exceed container width */
+    height: auto; /* maintain aspect ratio */
+  }
+
+  .overlay-collapse {
+    padding-bottom: 10px;
+  }
+
+  .nav-link {
+    padding-right: 10px;
   }
 }

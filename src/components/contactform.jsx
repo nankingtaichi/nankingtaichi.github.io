@@ -97,7 +97,9 @@ export default function ContactForm() {
           />
         </div>
 
-        <button type="submit">שלח</button>
+        <button type="submit" class="clickable highlight">
+          שלח
+        </button>
         {status && <p className={statusClass}>{statusText}</p>}
       </form>
     </section>
