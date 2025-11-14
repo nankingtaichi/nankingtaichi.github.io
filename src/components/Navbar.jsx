@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import Banner from "../assets/Banner.png";
 
 export default function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
@@ -21,12 +22,7 @@ export default function AppNavbar() {
           onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Brand as={NavLink} to="/">
-          <img
-            src="https://placehold.co/40x40"
-            alt="Logo"
-            className="me-2 rounded-circle"
-          />
-          נאנקינג טאי צ'י
+          <img src={Banner} alt="Logo" id="logo" />
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav" className="overlay-collapse">
           <Nav className="ms-auto">

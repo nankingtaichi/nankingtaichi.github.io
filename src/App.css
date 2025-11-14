@@ -3,8 +3,10 @@
   --background: #fbfbfe;
   --secondary: #e1e1e1;
   --accentLight: #d9f3d5;
+  --primaryDark: #0b619e;
   --accent: #baebb3;
-  --accentDark: #89d789;
+  --accentDark: #93da93;
+  --accentDarkest: #15731d;
 }
 
 #everything {

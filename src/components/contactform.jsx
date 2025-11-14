@@ -59,7 +59,7 @@ export default function ContactForm() {
 
   return (
     <section id="contact">
-      <h2>השאר הודעה</h2>
+      <h4 id="formTitle">צור קשר</h4>
       <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
           <input
@@ -87,8 +87,12 @@ export default function ContactForm() {
           <textarea
             name="content"
             value={formData.content}
-            onChange={handleChange}
-            placeholder="תוכן ההודעה"
+            onChange={(e) => {
+              handleChange(e);
+              e.target.style.height = "auto"; // reset height
+              e.target.style.height = e.target.scrollHeight + "px"; // adjust to content
+            }}
+            placeholder="הודעה"
             required
           />
         </div>

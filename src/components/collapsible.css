@@ -1,0 +1,42 @@
+.collapsible {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* header */
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* svg icon */
+.ying {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5rem; /* RTL */
+  transition: transform 0.35s ease, fill 0.35s ease;
+  fill: #555; /* default */
+}
+
+.ying.open {
+  fill: var(--accentDarkest);
+}
+
+/* title */
+.title {
+  flex: 1;
+  font-size: 1.4rem;
+}
+
+/* collapsible content area */
+.collapsible-content {
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
