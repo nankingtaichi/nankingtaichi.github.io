@@ -1,15 +1,7 @@
 /* Font imports */
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap");
 
-/* Base styles and layout */
-.home-page {
-  padding: 2rem;
-}
-
 .mycard {
-  border-radius: 20px;
-  box-shadow: 3px 3px 4px #1e00004c;
-  border: 1px solid rgb(113 55 55);
   display: flex;
   direction: rtl;
   align-items: flex-start;
@@ -37,7 +29,6 @@
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: #fffbfb;
   letter-spacing: -0.02em;
 }
 

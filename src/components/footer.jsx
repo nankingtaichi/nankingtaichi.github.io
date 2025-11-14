@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import ContactForm from "./contactform";
 
 export default function Footer() {
   return (
@@ -12,6 +13,7 @@ export default function Footer() {
             <i className="fas fa-phone"></i> ‎+972-50-123-4567
           </p>
         </div>
+        <ContactForm></ContactForm>
 
         <div className="footer-left">
           <a

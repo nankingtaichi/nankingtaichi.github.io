@@ -22,15 +22,11 @@ export default function Home() {
         </header>
 
         <Swiper
-          spaceBetween={30}
           effect={"fade"}
-          navigation={true}
-          pagination={{
-            clickable: true,
-          }}
+          speed={1200}
           loop={true}
           autoplay={{ delay: 3000 }}
-          modules={[EffectFade, Navigation, Pagination, Autoplay]}
+          modules={[EffectFade, Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide>

@@ -2,7 +2,9 @@
   --text: #1d1d1d;
   --background: #fbfbfe;
   --secondary: #e1e1e1;
+  --accentLight: #d9f3d5;
   --accent: #baebb3;
+  --accentDark: #89d789;
 }
 
 #everything {
@@ -36,4 +38,47 @@ body {
 
 :not(.background) {
   z-index: 10;
+}
+
+/*buttons*/
+
+.clickable {
+  border-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+.highlight {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+.clickable:hover {
+  background-color: var(--accentLight);
+  transition: background-color 0.1s;
+}
+
+.highlight:hover {
+  background-color: var(--accentDark);
+  border-radius: 10px;
+}
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accentDark);
 }

@@ -22,15 +22,10 @@
   text-align: right;
 }
 
-.footer-right h3 {
-  margin: 0 0 5px;
-  color: white;
-}
-
 .footer-left {
   display: flex;
   gap: 15px;
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .social-link {

@@ -31,6 +31,7 @@ export default function AppNavbar() {
         <Navbar.Collapse id="basic-navbar-nav" className="overlay-collapse">
           <Nav className="ms-auto">
             <Nav.Link
+              className="clickable"
               as={NavLink}
               to="/"
               end
@@ -39,6 +40,7 @@ export default function AppNavbar() {
               בית
             </Nav.Link>
             <Nav.Link
+              className="clickable"
               as={NavLink}
               to="/about"
               onClick={() => setExpanded(false)}
@@ -46,6 +48,7 @@ export default function AppNavbar() {
               האומנויות
             </Nav.Link>
             <Nav.Link
+              className="clickable"
               as={NavLink}
               to="/teacher"
               onClick={() => setExpanded(false)}
@@ -53,6 +56,7 @@ export default function AppNavbar() {
               המורה
             </Nav.Link>
             <Nav.Link
+              className="clickable highlight"
               as={NavLink}
               to="/contact"
               onClick={() => setExpanded(false)}
