@@ -28,13 +28,17 @@
   width: 100%;
   pointer-events: none;
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   mask-position: top;
+  -webkit-mask-position: top;
   mask-size: cover;
+  -webkit-mask-size: cover;
 }
 
 #teacher-transition {
   height: 200px;
   mask-image: url("../assets/transition.svg");
+  -webkit-mask-image: url("../assets/transition.svg");
   background-color: var(--primary);
 }
 .bamboo {
@@ -44,16 +48,20 @@
   max-height: 120vw;
   background-color: var(--primary);
   mask-size: contain;
+  -webkit-mask-size: contain;
   mask-position: bottom;
+  -webkit-mask-position: bottom;
   z-index: -1;
 }
 #bamboo-left {
   left: 5%;
   mask-image: url("../assets/bambooLeft.svg");
+  -webkit-mask-image: url("../assets/bambooLeft.svg");
 }
 #bamboo-right {
   right: 7%;
   mask-image: url("../assets/bambooRight.svg");
+  -webkit-mask-image: url("../assets/bambooRight.svg");
 }
 
 .trophies-row {

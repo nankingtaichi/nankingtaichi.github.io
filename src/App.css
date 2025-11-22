@@ -69,9 +69,13 @@ body {
   content: "";
   width: 110%;
   mask-image: url(assets/stroke2.png);
+  -webkit-mask-image: url(assets/stroke2.png);
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
   mask-position: center;
+  -webkit-mask-position: center;
   top: 0;
   left: 0;
   right: -4%;
@@ -108,7 +112,7 @@ body {
   left: 0;
   bottom: 3px;
   width: 100%;
-  height: 8px;
+  height: 7px;
 
   /* make the gradient twice as wide as the element */
   background: linear-gradient(
@@ -122,16 +126,22 @@ body {
   background-position: left; /* start fully shifted left */
 
   mask-image: url(assets/small_underline.png);
+  -webkit-mask-image: url(assets/small_underline.png);
+
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
   opacity: 0;
-  transition: background-position 2s ease, opacity 0.5s ease;
+  transition: background-position 0.6s cubic-bezier(1, 0, 1, 0),
+    opacity 0.5s ease;
 }
 
-.clickable:hover::after {
+.clickable:hover::after,
+.clickable.active::after {
   background-position: right; /* slide the gradient across the element */
   opacity: 1;
-  transition: background-position 0.5s ease;
+  transition: background-position 0.25s cubic-bezier(0.24, 0, 0.73, 0.33);
 }
 
 /*scrollbar*/
