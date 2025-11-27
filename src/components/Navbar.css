@@ -25,6 +25,7 @@
   padding: 0;
   justify-content: center;
   background-color: rgb(250, 249, 245) !important;
+  transition: all 0.3s ease;
 }
 
 #mynavbar::before {
@@ -57,7 +58,7 @@
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   padding: 5px 0;
 }
 
@@ -93,4 +94,10 @@
   .nav-link {
     padding-right: 10px;
   }
+}
+
+/* Shrink navbar on scroll */
+#mynavbar.shrink {
+  height: 60px; /* smaller navbar height */
+  font-size: 1rem;
 }

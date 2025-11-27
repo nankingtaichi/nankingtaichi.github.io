@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -6,6 +6,15 @@ import Banner from "../assets/graphics/navbar/Banner2.svg";
 
 export default function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // shrink after 50px scroll
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Navbar
@@ -13,7 +22,7 @@ export default function AppNavbar() {
       bg="light"
       expand="md"
       sticky="top"
-      className="shadow-sm"
+      className={`shadow-sm ${scrolled ? "shrink" : ""}`}
       expanded={expanded} // control the state
     >
       <Container>
@@ -21,7 +30,7 @@ export default function AppNavbar() {
           aria-controls="basic-navbar-nav"
           onClick={() => setExpanded(!expanded)}
         />
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand as={NavLink} to="/" className="brand-container">
           <img src={Banner} alt="Logo" id="logo" />
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav" className="overlay-collapse">
