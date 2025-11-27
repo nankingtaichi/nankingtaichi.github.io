@@ -1,0 +1,18 @@
+.bulleted-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  line-height: 2;
+}
+
+.bullet-icon {
+  height: 1.5rem;
+  margin-top: 0.2em;
+  flex-shrink: 0;
+}
+
+.bullet-content {
+  display: block;
+}
