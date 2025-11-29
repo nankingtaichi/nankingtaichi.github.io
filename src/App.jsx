@@ -8,6 +8,7 @@ import Teacher from "./pages/Teacher";
 import Footer from "./components/footer";
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
+import Qigong from "./pages/Qigong";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/taichi" element={<Taichi />} />
             <Route path="/teacher" element={<Teacher />} />
             <Route path="/plans" element={<Plans />} />
+            <Route path="/qigong" element={<Qigong />} />
           </Routes>
         </main>
         <Footer />
