@@ -9,20 +9,20 @@ export default function Qigong() {
     <div className="page">
       <div className="mycard padded">
         <div className="card-info">
-          <Title text={"טאי צ'י"} />
+          <Title text={"צ'י קונג"} />
           <div className="info-box">
             שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף.
             באופן טבעי כשתחושת הגוף טובה לרוב גם תחושת הנפש טובה יותר
           </div>
           <br></br>
-          התרגול פיזי וכולל עמידות, תנוחות, תנופות ופיתולים, נשימה ומחשב -
+          התרגול פיזי וכולל עמידות, תנוחות, תנופות ופיתולים, נשימה ומחשבה -
           מדיטציה.
           <br></br>
           <br></br>
           אנחנו מתרגלים 2 שיטות:
           <div style={{ paddingBottom: "0.5rem" }}></div>
           <BulletList>
-            <>אי ג'ין ג'ינג – Yi Jin Jing</>
+            <>אי ג׳ין ג׳ינג – Yi Jin Jing</>
             <>שמונה חלקי רקמת הזהב – Ba Duan Jin</>
           </BulletList>
         </div>

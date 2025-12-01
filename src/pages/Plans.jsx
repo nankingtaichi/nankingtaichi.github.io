@@ -2,6 +2,7 @@ import CalendarIcon from "../assets/graphics/plans/calendar.svg?react";
 import MoneyIcon from "../assets/graphics/plans/shekel.svg?react";
 import locationIcon from "../assets/graphics/plans/location.svg?react";
 import scheduleIcon from "../assets/graphics/plans/schedule.svg?react";
+import audienceIcon from "../assets/graphics/plans/audience.svg?react";
 import BulletedLine from "../components/BulletedLine";
 import ArrowDownIcon from "../assets/graphics/plans/arrow-down.svg?react";
 import taichiPhoto from "../assets/graphics/plans/taichi.jpg";
@@ -12,9 +13,14 @@ import Title from "../components/title";
 
 export default function Contact() {
   return (
-    <>
-      <div id="plansTopCard" className="mycard padded-top">
+    <div className="page">
+      <div className="mycard">
         <div>
+          <Title text={"לוח שיעורים"} />
+
+          <BulletedLine icon={audienceIcon}>
+            השיעורים מתאימים לכל הרמות ומיועדים לבני 20 ומעלה.{" "}
+          </BulletedLine>
           <BulletedLine icon={locationIcon}>
             השיעורים מתקיימים בדוג'ו ייעודי שממוקם{" "}
             <a
@@ -80,7 +86,7 @@ export default function Contact() {
           ]}
         />
       </div>
-    </>
+    </div>
   );
 }
 

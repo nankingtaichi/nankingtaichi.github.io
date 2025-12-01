@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Taichi from "./pages/taichi";
 import Plans from "./pages/Plans";
 import Teacher from "./pages/Teacher";

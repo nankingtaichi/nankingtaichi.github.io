@@ -1,10 +1,3 @@
-.page.teacher-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
 .teacher-photo {
   width: 400px;
   max-width: 80%;
