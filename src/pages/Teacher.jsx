@@ -2,6 +2,7 @@ import Title from "../components/title";
 import teacherPhoto from "../assets/graphics/teacher/teacher2.png";
 import dan1Photo from "../assets/graphics/teacher/dan1.svg";
 import dan2Photo from "../assets/graphics/teacher/dan2.svg";
+import wingatePhoto from "../assets/graphics/teacher/wingate.svg";
 import armyPhoto from "../assets/graphics/teacher/army.jpg";
 import karatePhoto from "../assets/graphics/teacher/karate.jpg";
 import taichiPhoto from "../assets/graphics/teacher/taichi2.png";
@@ -17,14 +18,13 @@ export default function Teacher() {
 
       <img src={teacherPhoto} alt="Teacher" className="teacher-photo" />
 
-      <div className="trophies-wrapper">
-        {/* absolute overlay */}
-
-        <div className="trophies-row">
-          <div id="teacher-transition" className="top-transition"></div>
-          <div id="bamboo-left" className="top-transition bamboo"></div>
-          <div id="bamboo-right" className="top-transition bamboo"></div>
+      <div id="teacher-top-graphic">
+        <div className="transition-wrapper" id="teacher-transition-wrapper">
+          <div className="transition-peak"></div>
+          <div className="transition-fill"></div>
         </div>
+        <div id="" className="bamboo-left bamboo"></div>
+        <div id="" className="bamboo-right bamboo"></div>
       </div>
 
       <div className="mycard padded padded-top">
@@ -83,6 +83,11 @@ export default function Teacher() {
                 <>פה-קואה</>
                 <>כלי נשק מסורתיים</>
               </BulletList>
+              <p>
+                בשנת 1992 הוסמכתי במכון וינגייט
+                <img src={wingatePhoto} alt="Dan 1" className="dan-icon" />{" "}
+                להדרכת לחימה סינית וב-2004 פתחתי את בית הספר שלי שפועל עד עתה.
+              </p>
             </div>
           </div>
           <img src={taichiPhoto} className="card-graphic padded"></img>
@@ -91,8 +96,6 @@ export default function Teacher() {
         <div className="mycard padded flipped">
           <div className="card-info">
             <div>
-              <p>ב-2004 פתחתי את בית הספר שלי בשרון, שפועל עד עתה.</p>
-
               <p>מ-1989, בנוסף לאומנויות הלחימה, אני עוסק בלימוד רציף של:</p>
 
               <BulletList>

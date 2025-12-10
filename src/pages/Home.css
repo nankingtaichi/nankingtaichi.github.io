@@ -5,7 +5,7 @@
 .fs-video-container {
   position: relative;
   width: 100vw;
-  height: calc(100vh - var(--nav-height));
+  height: calc(100vh - var(--nav-height) + 20px);
   overflow: hidden;
 }
 
@@ -50,4 +50,56 @@
   .fs-video-container__subtitle {
     font-size: 1.5rem;
   }
+}
+
+#about-school {
+  background-color: unset;
+  padding: 110px 50px;
+  padding-bottom: 140px;
+}
+
+#about-dojo {
+  padding: 100px;
+  padding: 110px 50px;
+  padding-top: 140px;
+}
+
+#about-dojo .bamboo {
+  height: 300px;
+  bottom: 90%;
+}
+#about-dojo .bamboo.bamboo-left {
+  left: 0%;
+}
+#about-dojo .bamboo.bamboo-right {
+  right: 0%;
+}
+
+#nanking-transition {
+  z-index: 5;
+}
+
+#nanking-transition .transition-peak {
+  background-color: var(--background);
+}
+
+.ying-yang-base,
+.ying-yang-top {
+  background-color: var(--background);
+  width: 120px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  mask-image: url("../assets/graphics/home/ying-yang-base.svg");
+  -webkit-mask-image: url("../assets/graphics/home/ying-yang-base.svg");
+}
+.ying-yang-base {
+  width: 119px;
+}
+.ying-yang-top {
+  mask-image: url("../assets/graphics/home/ying-yang-top.svg");
+  -webkit-mask-image: url("../assets/graphics/home/ying-yang-top.svg");
+  background-color: var(--secondary);
 }

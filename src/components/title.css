@@ -3,22 +3,43 @@
   text-align: center; /* center text and line */
   position: relative;
   margin-bottom: 1rem;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lined-title {
   font-size: 2rem;
+  margin-bottom: 0;
 }
 
 .title-line {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0.75rem 0;
   fill: var(--text);
+  max-width: 500px;
+  justify-self: center;
+  margin-bottom: 0.2rem;
 }
 
 @media (max-width: 768px) {
   .title-wrapper {
     align-self: center;
   }
+}
+
+.center-title {
+  max-width: 900px;
+}
+.center-title .title-line {
+  margin-bottom: 1rem;
+}
+.center-title .lined-title {
+  font-size: 3rem;
+}
+.center-title.title-wrapper {
+  gap: 15px;
 }

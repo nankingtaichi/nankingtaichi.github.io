@@ -7,35 +7,51 @@
   z-index: 1;
 }
 
-.trophies-wrapper {
-  position: relative;
+#teacher-top-graphic {
+  padding-bottom: 50px;
   width: 100%;
   background-color: var(--secondary);
+  position: relative;
 }
 
-.top-transition {
+.transition-wrapper {
   position: absolute;
   bottom: 100%;
   width: 100%;
   pointer-events: none;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: top;
-  -webkit-mask-position: top;
-  mask-size: cover;
-  -webkit-mask-size: cover;
+  background-color: unset;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+.transition-wrapper.on-top {
+  z-index: 1;
+}
+.transition-fill {
+  background-color: var(--secondary);
+  height: 100px;
+}
+.transition-peak {
+  height: 50px;
+  mask-image: url("../assets/graphics/misc/transition2.svg");
+  -webkit-mask-image: url("../assets/graphics/misc/transition2.svg");
+  background-color: var(--secondary);
+  mask-repeat: repeat-x;
+  -webkit-mask-repeat: repeat-x;
+  mask-position: bottom;
+  -webkit-mask-position: bottom;
+  mask-size: 100%; /*must set in the svg preserveaspectratio="none"*/
+  -webkit-mask-size: 100%; /*must set in the svg preserveaspectratio="none"*/
 }
 
-#teacher-transition {
-  height: 200px;
-  mask-image: url("../assets/graphics/misc/transition.svg");
-  -webkit-mask-image: url("../assets/graphics/misc/transition.svg");
-  background-color: var(--secondary);
+.transition-peak.short {
+  height: 20px;
 }
+
 .bamboo {
+  bottom: 100%;
   height: 500px;
   width: 300px;
-  margin-bottom: 30px;
   max-height: 120vw;
   background-color: var(--secondary);
   mask-size: contain;
@@ -43,13 +59,16 @@
   mask-position: bottom;
   -webkit-mask-position: bottom;
   z-index: -1;
+  position: absolute;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
-#bamboo-left {
+.bamboo.bamboo-left {
   left: 5%;
   mask-image: url("../assets/graphics/teacher/bambooLeft.svg");
   -webkit-mask-image: url("../assets/graphics/teacher/bambooLeft.svg");
 }
-#bamboo-right {
+.bamboo.bamboo-right {
   right: 7%;
   mask-image: url("../assets/graphics/teacher/bambooRight.svg");
   -webkit-mask-image: url("../assets/graphics/teacher/bambooRight.svg");
@@ -91,7 +110,7 @@
 }
 
 @media (max-width: 500px) {
-  #bamboo-right {
+  .bamboo-right {
     display: none;
   }
 }
