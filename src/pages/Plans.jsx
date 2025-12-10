@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <div className="page">
       <div className="mycard">
-        <div>
+        <div className="card-info">
           <Title text={"לוח שיעורים"} />
 
           <BulletedLine icon={audienceIcon}>

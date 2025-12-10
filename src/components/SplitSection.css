@@ -33,7 +33,7 @@
 
 .pill-button {
   padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
+  border-radius: 5px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -56,8 +56,7 @@
 }
 
 .pill-button.outline:hover {
-  background-color: var(--accent);
-  color: var(--background);
+  background-color: var(--primary);
 }
 
 /* Responsive for devices narrower than 768px */
