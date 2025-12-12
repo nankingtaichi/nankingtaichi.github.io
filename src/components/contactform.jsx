@@ -1,6 +1,7 @@
 // ContactForm.jsx
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./ContactForm.css";
+import BrushFrame from "./BrushFrame";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ export default function ContactForm() {
     content: "",
   });
   const [status, setStatus] = useState("");
+  const formRef = useRef(null);
+  const [tick, setTick] = useState(0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,6 +38,7 @@ export default function ContactForm() {
       if (result.success) {
         setStatus("sent");
         setFormData({ name: "", phone: "", content: "" });
+        setTick((x) => x + 1);
       } else {
         setStatus("error");
       }
@@ -57,53 +61,65 @@ export default function ContactForm() {
     statusClass = "status-error";
   }
 
+  const formValid =
+    formRef.current &&
+    formRef.current.checkValidity() &&
+    formData.name.trim().length > 0;
+
   return (
-    <section id="contact">
-      <h4 id="formTitle">צור קשר</h4>
-      <form onSubmit={handleSubmit}>
-        <div className="input-wrapper">
-          <input
-            type="text"
-            name="name"
-            autoComplete="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="שם"
-            required
-          />
-        </div>
+    <BrushFrame overshoot={20} fill={false} id="contact">
+      <section>
+        <h4 id="formTitle">צור קשר</h4>
+        <form onSubmit={handleSubmit} ref={formRef}>
+          <div className="input-wrapper">
+            <input
+              type="text"
+              name="name"
+              autoComplete="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="שם"
+              required
+            />
+          </div>
 
-        <div className="input-wrapper">
-          <input
-            type="tel"
-            name="phone"
-            autoComplete="tel"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="טלפון"
-            required
-          />
-        </div>
+          <div className="input-wrapper">
+            <input
+              type="tel"
+              name="phone"
+              autoComplete="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="טלפון"
+              required
+            />
+          </div>
 
-        <div className="input-wrapper">
-          <textarea
-            name="content"
-            value={formData.content}
-            onChange={(e) => {
-              handleChange(e);
-              e.target.style.height = "auto"; // reset height
-              e.target.style.height = e.target.scrollHeight + "px"; // adjust to content
-            }}
-            placeholder="הודעה"
-            required
-          />
-        </div>
+          <div className="input-wrapper">
+            <textarea
+              name="content"
+              value={formData.content}
+              onChange={(e) => {
+                handleChange(e);
+                e.target.style.height = "auto"; // reset height
+                e.target.style.height = e.target.scrollHeight + "px"; // adjust to content
+              }}
+              placeholder="הודעה"
+            />
+          </div>
 
-        <button type="submit" class="clickable highlight">
-          שלח
-        </button>
-        {status && <p className={statusClass}>{statusText}</p>}
-      </form>
-    </section>
+          <BrushFrame color={formValid ? "var(--accent)" : "var(--primary)"}>
+            <button
+              type="submit"
+              class={`submit clickable ${formValid ? "" : "invalid"}`}
+            >
+              שלח
+            </button>
+          </BrushFrame>
+
+          {status && <p className={statusClass}>{statusText}</p>}
+        </form>
+      </section>
+    </BrushFrame>
   );
 }

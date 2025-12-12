@@ -1,7 +1,7 @@
 import { useRef, createRef } from "react";
 import Title from "../components/title";
 import "./taichi.css";
-import TaichiImg from "../assets/graphics/taichi/taichi.png";
+import TaichiImg from "../assets/graphics/taichi/taichi.jpg";
 import Collapsible from "../components/collapsible";
 import BrushFrame from "../components/BrushFrame";
 
@@ -107,11 +107,11 @@ export default function Taichi() {
           </Collapsible>
         </div>
 
-        <img
-          src={TaichiImg}
-          className="card-graphic padded"
+        <div
+          className="card-graphic padded background-image"
           id="taichiGraphic"
-        ></img>
+          style={{ backgroundImage: `url(${TaichiImg})` }}
+        ></div>
       </div>
     </div>
   );

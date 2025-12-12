@@ -302,6 +302,14 @@ a {
 
   .card-graphic {
     flex-basis: unset;
+    width: 100%;
     max-width: 100%;
   }
+}
+
+.background-image {
+  background-size: cover;
+  min-height: 400px;
+  height: 400px;
+  background-position: center;
 }

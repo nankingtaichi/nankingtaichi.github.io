@@ -1,13 +1,13 @@
 /* ContactForm.css */
-section#contact {
+#contact {
   padding: 1rem;
-  background-color: var(--background);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-grow: 10;
   flex-basis: 0;
   max-width: 500px;
+  background-color: var(--background);
 }
 
 #formTitle {
@@ -24,18 +24,17 @@ input,
 textarea {
   width: 100%;
   padding: 0.75rem; /* space for icon */
-  border: 1px solid var(--primary);
-  border-radius: 8px;
+  border: unset;
   text-align: right; /* Hebrew text right-aligned */
   transition: all 0.5s;
   padding: 8px;
+  background-color: unset;
+  border-bottom: 2px solid var(--accent);
 }
 
 .input-wrapper textarea {
   resize: none; /* prevent manual resize */
   overflow: hidden; /* hide scrollbars */
-  min-height: 3em; /* initial height */
-  height: auto; /* let CSS manage height */
 }
 
 .input-wrapper {
@@ -46,7 +45,6 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accentDark);
-  box-shadow: 0 0 5px var(--accent);
   transition: all 0.1s;
 }
 
@@ -54,12 +52,13 @@ textarea {
   resize: vertical;
 }
 
-button {
+.submit {
   padding: 0.75rem;
   border: none;
   transition: all 0.5s;
+  background-color: unset;
+  box-sizing: content-box;
 }
-
 .status-sending,
 .status-sent {
   text-align: center;
@@ -76,7 +75,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  section#contact {
+  #contact {
     order: 1;
     max-width: unset;
   }
