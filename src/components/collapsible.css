@@ -27,7 +27,7 @@
 }
 
 .ying.open {
-  fill: var(--accentDarkest);
+  fill: var(--accent);
 }
 
 /* title */

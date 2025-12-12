@@ -68,6 +68,11 @@
   height: 300px;
   bottom: 90%;
 }
+@media (max-width: 1200px) {
+  #about-dojo .bamboo {
+    display: none;
+  }
+}
 #about-dojo .bamboo.bamboo-left {
   left: 0%;
 }
@@ -102,4 +107,13 @@
   mask-image: url("../assets/graphics/home/ying-yang-top.svg");
   -webkit-mask-image: url("../assets/graphics/home/ying-yang-top.svg");
   background-color: var(--secondary);
+}
+
+.page-wide-content {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }

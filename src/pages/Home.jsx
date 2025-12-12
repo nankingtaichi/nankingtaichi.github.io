@@ -45,24 +45,23 @@ export default function Home() {
         <div className="transition-wrapper" id="nanking-transition">
           <div className="transition-peak short"></div>
         </div>
-        <Title
-          text="נאנקינג טאי צ'י"
-          subtitle={
-            "בית הספר פועל מאז 2004 בהוראת המורה אפי דינר, ומתמחה באומנויות הלחימה הרכות-הפנימיות: טאי צ’י, צ’י קונג, שינג אי, פה קואה וכלי נשק מסורתיים."
-          }
-          center={true}
-        ></Title>
+        <div className="page-wide-content">
+          <Title text="נאנקינג טאי צ'י" center={true}></Title>
+          <h5>
+            בית הספר פועל מאז 2004 בהוראת המורה אפי דינר, ומתמחה באומנויות
+            הלחימה הרכות-הפנימיות: טאי צ’י, צ’י קונג, שינג אי, פה קואה וכלי נשק
+            מסורתיים.
+          </h5>
+        </div>
       </div>
 
       <div id="about-dojo" className="page-wide-wrapper">
         {/* absolute overlay */}
 
-        <Title
-          subtitle={
-            "השיעורים מתקיימים ביישוב קדימה צורן, סמוך לכביש 4 בין רעננה לנתניה. אולם האימונים מעוצב בסגנון מסורתי ומיועד רק לשיעורים באומנויות הלחימה."
-          }
-          center={true}
-        ></Title>
+        <div className="page-wide-content">
+          השיעורים מתקיימים ביישוב קדימה צורן, סמוך לכביש 4 בין רעננה לנתניה.
+          אולם האימונים מעוצב בסגנון מסורתי ומיועד רק לשיעורים באומנויות הלחימה.{" "}
+        </div>
 
         <div
           className="transition-wrapper on-top"
@@ -88,7 +87,7 @@ export default function Home() {
 
       <SplitSection
         title="צ'י קונג"
-        text="שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף. באופן טבעי כשתחושת הגוף טובה. "
+        text="שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף. באופן טבעי כשתחושת הגוף טובה לרוב גם תחושת הנפש טובה יותר. "
         leftImage="/images/left2.jpg"
         button1Text="קריאה נוספת"
         button1Link="qigong"

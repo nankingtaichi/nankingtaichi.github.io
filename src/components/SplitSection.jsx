@@ -1,5 +1,6 @@
 import React from "react";
 import "./SplitSection.css";
+import BrushFrame from "./BrushFrame";
 
 export default function SplitSection({
   title,
@@ -16,12 +17,20 @@ export default function SplitSection({
         <h2>{title}</h2>
         <p>{text}</p>
         <div className="button-row">
-          <a className="pill-button outline" href={button1Link}>
-            {button1Text}
-          </a>
-          <a className="pill-button filled" href={button2Link}>
-            {button2Text}
-          </a>
+          <BrushFrame fill={false}>
+            <div>
+              <div className="pill-button clickable" href={button1Link}>
+                {button1Text}
+              </div>
+            </div>
+          </BrushFrame>
+          <BrushFrame>
+            <div>
+              <a className="pill-button clickable" href={button2Link}>
+                {button2Text}
+              </a>
+            </div>
+          </BrushFrame>
         </div>
       </div>
       <div

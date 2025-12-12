@@ -11,8 +11,9 @@
 }
 
 .lined-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 0;
+  font-family: titleFont;
 }
 
 .title-line {
@@ -31,15 +32,6 @@
   }
 }
 
-.center-title {
-  max-width: 900px;
-}
 .center-title .title-line {
-  margin-bottom: 1rem;
-}
-.center-title .lined-title {
-  font-size: 3rem;
-}
-.center-title.title-wrapper {
-  gap: 15px;
+  margin-bottom: 1.5rem;
 }

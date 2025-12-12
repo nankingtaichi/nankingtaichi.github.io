@@ -3,6 +3,7 @@ import Title from "../components/title";
 import "./taichi.css";
 import TaichiImg from "../assets/graphics/taichi/taichi.png";
 import Collapsible from "../components/collapsible";
+import BrushFrame from "../components/BrushFrame";
 
 export default function Taichi() {
   // Create a dictionary of refs keyed by IDs
@@ -27,28 +28,31 @@ export default function Taichi() {
       <div className="mycard padded">
         <div className="card-info">
           <Title text={"טאי צ'י"} />
-          <div className="info-box">
-            אומנות לחימה סינית, השייכת לענף{" "}
-            <span className="hyperlink" onClick={() => jumpTo("soft")}>
-              אומנויות הלחימה הרכות
-            </span>{" "}
-            <span className="hyperlink" onClick={() => jumpTo("inner")}>
-              הפנימיות
-            </span>
-            . אומנות המעבירה דרך תנועה{" "}
-            <span className="hyperlink" onClick={() => jumpTo("meditation")}>
-              ומדיטציה
-            </span>{" "}
-            את עקרונות הדאואיזם, הרפואה הסינית{" "}
-            <span className="hyperlink" onClick={() => jumpTo("combat")}>
-              והלחימה
-            </span>{" "}
-            כדרך לתרגול{" "}
-            <span className="hyperlink" onClick={() => jumpTo("kongfu")}>
-              קונג פו{" "}
-            </span>
-            לחיזוק הגוף ולהתפתחות נפשית ומנטלית.
-          </div>
+          <BrushFrame color="var(--primary)" thickness="10">
+            <div className="info-box">
+              אומנות לחימה סינית, השייכת לענף{" "}
+              <span className="hyperlink" onClick={() => jumpTo("soft")}>
+                אומנויות הלחימה הרכות
+              </span>{" "}
+              <span className="hyperlink" onClick={() => jumpTo("inner")}>
+                הפנימיות
+              </span>
+              . אומנות המעבירה דרך תנועה{" "}
+              <span className="hyperlink" onClick={() => jumpTo("meditation")}>
+                ומדיטציה
+              </span>{" "}
+              את עקרונות הדאואיזם, הרפואה הסינית{" "}
+              <span className="hyperlink" onClick={() => jumpTo("combat")}>
+                והלחימה
+              </span>{" "}
+              כדרך לתרגול{" "}
+              <span className="hyperlink" onClick={() => jumpTo("kongfu")}>
+                קונג פו{" "}
+              </span>
+              לחיזוק הגוף ולהתפתחות נפשית ומנטלית.
+            </div>
+          </BrushFrame>
+
           <br></br>
 
           <Collapsible ref={collapsibleRefs.current.soft} title="אומנויות רכות">

@@ -10,6 +10,8 @@
 .nav-link {
   color: var(--text);
   font-family: mainFont;
+  padding: 0 0.5rem !important;
+  margin: 1rem 0.5rem;
 }
 
 .navbar .container {

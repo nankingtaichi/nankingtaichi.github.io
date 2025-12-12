@@ -13,7 +13,6 @@
 .split-left {
   background-size: cover;
   background-position: center;
-  background-color: #007bff;
 }
 
 .split-right {
@@ -27,36 +26,16 @@
 
 .button-row {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1.5rem;
 }
 
 .pill-button {
-  padding: 0.5rem 1.5rem;
+  margin: 0.3rem 0.75rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 5px;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.pill-button.filled {
-  background-color: var(--accent);
-  color: var(--background);
-  border: none;
-}
-
-.pill-button.filled:hover {
-  background-color: var(--accent-dark);
-}
-
-.pill-button.outline {
-  background-color: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.pill-button.outline:hover {
-  background-color: var(--primary);
 }
 
 /* Responsive for devices narrower than 768px */

@@ -3,6 +3,7 @@ import "./taichi.css";
 import TaichiImg from "../assets/graphics/taichi/taichi.png";
 import Collapsible from "../components/collapsible";
 import BulletList from "../components/BulletList";
+import BrushFrame from "../components/BrushFrame";
 
 export default function Qigong() {
   return (
@@ -10,10 +11,12 @@ export default function Qigong() {
       <div className="mycard padded">
         <div className="card-info">
           <Title text={"צ'י קונג"} />
-          <div className="info-box">
-            שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף.
-            באופן טבעי כשתחושת הגוף טובה לרוב גם תחושת הנפש טובה יותר
-          </div>
+          <BrushFrame color="var(--primary)" thickness="10">
+            <div className="info-box">
+              שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף.
+              באופן טבעי כשתחושת הגוף טובה לרוב גם תחושת הנפש טובה יותר
+            </div>
+          </BrushFrame>
           <br></br>
           התרגול פיזי וכולל עמידות, תנוחות, תנופות ופיתולים, נשימה ומחשבה -
           מדיטציה.

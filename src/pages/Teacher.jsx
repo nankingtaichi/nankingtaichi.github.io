@@ -14,8 +14,11 @@ import "./Teacher.css";
 export default function Teacher() {
   return (
     <div className="teacher-page page">
-      <Title text="אפי דינר" subtitle="מייסד ומורה בית הספר"></Title>
-
+      <Title
+        text="אפי דינר"
+        subtitle={"מייסד ומורה בית הספר"}
+        center={true}
+      ></Title>
       <img src={teacherPhoto} alt="Teacher" className="teacher-photo" />
 
       <div id="teacher-top-graphic">

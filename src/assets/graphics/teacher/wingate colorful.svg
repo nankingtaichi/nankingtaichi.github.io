@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.98 119.15">
+<svg id="svg8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.98 119.15">
   <defs>
     <style>
-      .cls-1 { fill: none; }
-      .cls-2 { fill: black; }
-      .cls-3 { clip-path: url(#clippath); }
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
     </style>
     <clipPath id="clippath">
       <rect class="cls-1" width="229.98" height="119.15"/>
     </clipPath>
+    <radialGradient id="radial-gradient" cx="-840.74" cy="653.86" fx="-840.74" fy="653.86" r="1" gradientTransform="translate(76530.68 59490.09) scale(90.89 -90.89)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a6d71c"/>
+      <stop offset=".57" stop-color="#37983c"/>
+      <stop offset="1" stop-color="#37983c"/>
+    </radialGradient>
   </defs>
   <g id="g150">
     <g id="g152">

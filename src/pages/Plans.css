@@ -3,15 +3,22 @@
   flex-wrap: wrap;
 }
 
-.lesson-plan {
-  display: flex;
-  flex-direction: column;
+.lesson-plan-frame {
   flex-basis: 0;
   flex-grow: 1;
-  align-items: center;
   width: 100%;
   min-width: 300px;
-  background-color: rgb(217, 222, 217);
+  transition: all ease-in-out 0.5s;
+}
+
+.lesson-plan-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lesson-plan-frame:hover {
+  flex-grow: 2;
 }
 
 .lesson-plan-img-wrapper {

@@ -7,7 +7,8 @@ import BulletedLine from "../components/BulletedLine";
 import ArrowDownIcon from "../assets/graphics/plans/arrow-down.svg?react";
 import taichiPhoto from "../assets/graphics/plans/taichi.jpg";
 import shingiPhoto from "../assets/graphics/plans/shingi.jpg";
-import privatePhoto from "../assets/graphics/plans/private.png";
+import privatePhoto from "../assets/graphics/plans/private3.jpg";
+import BrushFrame from "../components/BrushFrame";
 import "./Plans.css";
 import Title from "../components/title";
 
@@ -104,21 +105,26 @@ function ContactButton({ children }) {
 
 function LessonPlan({ title, img, items }) {
   return (
-    <div className="lesson-plan">
-      <div className="lesson-plan-title">{title}</div>
-
-      <div
-        className="lesson-plan-img-wrapper"
-        style={{ backgroundImage: `url(${img})` }}
-      >
-        <div className="lesson-plan-overlay">
-          {items.map((item, i) => (
-            <BulletedLine key={i} icon={item.icon}>
-              {item.text}
-            </BulletedLine>
-          ))}
+    <BrushFrame
+      color="var(--primary)"
+      thickness={10}
+      className="lesson-plan-frame"
+    >
+      <div className="lesson-plan-content">
+        <div className="lesson-plan-title">{title}</div>
+        <div
+          className="lesson-plan-img-wrapper"
+          style={{ backgroundImage: `url(${img})` }}
+        >
+          <div className="lesson-plan-overlay">
+            {items.map((item, i) => (
+              <BulletedLine key={i} icon={item.icon}>
+                {item.text}
+              </BulletedLine>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </BrushFrame>
   );
 }

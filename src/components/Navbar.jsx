@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import Banner from "../assets/graphics/navbar/Banner.svg";
+import BrushFrame from "./BrushFrame";
 
 export default function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
@@ -70,12 +71,12 @@ export default function AppNavbar() {
             </Nav.Link>
 
             <Nav.Link
-              className="clickable highlight"
+              className="clickable"
               as={NavLink}
               to="/plans"
               onClick={() => setExpanded(false)}
             >
-              לוח שיעורים
+              <BrushFrame overshoot={8}>לוח שיעורים</BrushFrame>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
