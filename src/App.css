@@ -42,7 +42,7 @@
   height: 100%;
   display: flex;
   position: absolute;
-  background-image: url(assets/graphics/misc/paper.jpg);
+  background-image: url(assets/graphics/misc/paper.webp);
   background-size: 175px;
   opacity: 30%;
   z-index: 30;
