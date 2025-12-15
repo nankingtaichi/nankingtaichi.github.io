@@ -25,7 +25,6 @@ export default function App() {
             <Route path="/teacher" element={<Teacher />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/qigong" element={<Qigong />} />
-            <Route path="*" element={<Navigate to="/" />} /> {/* fallback */}
           </Routes>
         </main>
         <Footer />

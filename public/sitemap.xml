@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nankingtaichi.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nankingtaichi.github.io/taichi</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nankingtaichi.github.io/teacher</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nankingtaichi.github.io/plans</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nankingtaichi.github.io/qigong</loc>
+    <priority>0.4</priority>
+  </url>
+</urlset>
