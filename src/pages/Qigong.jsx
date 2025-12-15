@@ -1,6 +1,6 @@
 import Title from "../components/title";
 import "./taichi.css";
-import TaichiImg from "../assets/graphics/taichi/taichi.jpg";
+import TaichiImg from "../assets/graphics/qigong/qigong.jpg";
 import Collapsible from "../components/collapsible";
 import BulletList from "../components/BulletList";
 import BrushFrame from "../components/BrushFrame";

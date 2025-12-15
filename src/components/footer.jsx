@@ -42,34 +42,54 @@ export default function Footer() {
         </div>
         <ContactForm></ContactForm>
 
-        <div className="footer-media-links">
-          <a
-            href="https://www.youtube.com/@NankingTaiChi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="YouTube"
-          >
-            <i className="fab fa-youtube"></i>
-          </a>
-          <a
-            href="https://facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="Facebook"
-          >
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="Facebook"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
+        <div className="footer-contact-links">
+          <p class="footer-link">
+            <a
+              href="https://www.youtube.com/@NankingTaiChi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="YouTube"
+            >
+              <i className="fab fa-youtube"></i>
+              סרטוני לימוד ועוד{" "}
+            </a>
+          </p>
+
+          {true ? (
+            <></>
+          ) : (
+            <>
+              <a
+                href="https://www.youtube.com/@NankingTaiChi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="YouTube"
+              >
+                סרטוני לימוד
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Facebook"
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Facebook"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            </>
+          )}
         </div>
       </div>
     </footer>
