@@ -12,6 +12,7 @@ import BrushFrame from "../components/BrushFrame";
 import "./Plans.css";
 import Title from "../components/title";
 import { scrollToElement } from "../Helpers";
+import FadeIn from "../components/fadeIn";
 
 export default function Contact() {
   return (
@@ -67,11 +68,13 @@ export default function Contact() {
             { icon: CalendarIcon, text: "ימי א' 19:30 - 18:00" },
             { icon: MoneyIcon, text: 'תשלום חודשי: 400 ש"ח' },
           ]}
+          index={0}
         />
         <LessonPlan
           title="שינג אי ו-פה קואה"
           img={shingiPhoto}
           items={[{ icon: CalendarIcon, text: "ימי ד' 20:00 - 18:00" }]}
+          index={1}
         />
         <LessonPlan
           title="שיעורים אישיים"
@@ -80,6 +83,7 @@ export default function Contact() {
             { icon: CalendarIcon, text: "כל ימי ושעות השבוע" },
             { icon: MoneyIcon, text: 'תשלום למפגש: 150 ש"ח' },
           ]}
+          index={2}
         />
       </div>
     </div>
@@ -98,28 +102,30 @@ function ContactButton({ children }) {
   );
 }
 
-function LessonPlan({ title, img, items }) {
+function LessonPlan({ title, img, items, index }) {
   return (
-    <BrushFrame
-      color="var(--primary)"
-      thickness={10}
-      className="lesson-plan-frame"
-    >
-      <div className="lesson-plan-content">
-        <div className="lesson-plan-title">{title}</div>
-        <div
-          className="lesson-plan-img-wrapper"
-          style={{ backgroundImage: `url(${img})` }}
-        >
-          <div className="lesson-plan-overlay">
-            {items.map((item, i) => (
-              <BulletedLine key={i} icon={item.icon}>
-                {item.text}
-              </BulletedLine>
-            ))}
+    <FadeIn delay={index * 0.5} className="lesson-plan-frame">
+      <BrushFrame
+        className="lesson-plan-content"
+        color="var(--primary)"
+        thickness={10}
+      >
+        <div className="lesson-plan-content">
+          <div className="lesson-plan-title">{title}</div>
+          <div
+            className="lesson-plan-img-wrapper"
+            style={{ backgroundImage: `url(${img})` }}
+          >
+            <div className="lesson-plan-overlay">
+              {items.map((item, i) => (
+                <BulletedLine key={i} icon={item.icon}>
+                  {item.text}
+                </BulletedLine>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </BrushFrame>
+      </BrushFrame>
+    </FadeIn>
   );
 }

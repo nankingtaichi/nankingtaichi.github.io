@@ -2,7 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Home.css";
-import OpeningVideo from "../assets/graphics/home/opener.webm"; // adjust path
+import OpeningVideo from "../assets/graphics/home/opener compressed.webm"; // adjust path
+import OpeningVideoPoser from "../assets/graphics/home/opener-poster.webp"; // adjust path
 import TaichiImg from "../assets/graphics/home/taichi.webp";
 import QigongImg from "../assets/graphics/home/qigong.webp";
 import TeacherImg from "../assets/graphics/home/teacher.webp";
@@ -34,7 +35,9 @@ export default function Home() {
           loop
           muted
           playsInline
+          poster={OpeningVideoPoser}
           src={OpeningVideo}
+          preload="metadata"
         />
         <div className="fs-video-container__overlay" />
         <div className="fs-video-container__logo-wrapper">

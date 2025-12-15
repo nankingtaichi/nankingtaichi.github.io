@@ -27,7 +27,15 @@ export default function Teacher() {
           subtitle={"מייסד ומורה בית הספר"}
           center={true}
         ></Title>
-        <img src={teacherPhoto} alt="Teacher" className="teacher-photo" />
+        <motion.img
+          src={teacherPhoto}
+          alt="Teacher"
+          className="teacher-photo"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        />
 
         <div id="teacher-top-graphic">
           <div className="transition-wrapper" id="teacher-transition-wrapper">

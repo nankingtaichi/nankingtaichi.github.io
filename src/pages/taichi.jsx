@@ -4,6 +4,7 @@ import "./taichi.css";
 import TaichiImg from "../assets/graphics/taichi/taichi.webp";
 import Collapsible from "../components/collapsible";
 import BrushFrame from "../components/BrushFrame";
+import FadeIn from "../components/fadeIn";
 
 export default function Taichi() {
   // Create a dictionary of refs keyed by IDs
@@ -107,11 +108,11 @@ export default function Taichi() {
           </Collapsible>
         </div>
 
-        <div
+        <FadeIn
           className="card-graphic padded background-image"
           id="taichiGraphic"
           style={{ backgroundImage: `url(${TaichiImg})` }}
-        ></div>
+        ></FadeIn>
       </div>
     </div>
   );

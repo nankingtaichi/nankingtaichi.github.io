@@ -4,6 +4,7 @@ import TaichiImg from "../assets/graphics/qigong/qigong.webp";
 import Collapsible from "../components/collapsible";
 import BulletList from "../components/BulletList";
 import BrushFrame from "../components/BrushFrame";
+import FadeIn from "../components/fadeIn";
 
 export default function Qigong() {
   return (
@@ -30,11 +31,11 @@ export default function Qigong() {
           </BulletList>
         </div>
 
-        <div
+        <FadeIn
           className="card-graphic padded background-image"
           id="taichiGraphic"
           style={{ backgroundImage: `url(${TaichiImg})` }}
-        ></div>
+        ></FadeIn>
       </div>
     </div>
   );
