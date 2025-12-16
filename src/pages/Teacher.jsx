@@ -16,7 +16,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Teacher() {
   const { scrollY } = useScroll();
-  const maskY = useTransform(scrollY, [0, 10000], [0, 14000]); // tune ranges
+  const maskY = useTransform(scrollY, [0, 10000], [0, -7500]); // tune ranges
   const maskPos = useTransform(maskY, (v) => `center ${v}px`);
 
   return (
