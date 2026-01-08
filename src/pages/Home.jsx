@@ -90,9 +90,9 @@ export default function Home() {
           text="אומנות לחימה סינית, השייכת לענף אומנויות הלחימה הרכות הפנימיות. אומנות המעבירה דרך תנועה ומדיטציה את עקרונות הדאואיזם, הרפואה הסינית והלחימה כדרך לתרגול קונג פו לחיזוק הגוף ולהתפתחות נפשית ומנטלית. "
           leftImage={TaichiImg}
           button1Text="קריאה נוספת"
-          button1Link="/taichi"
+          button1Link="/#/taichi"
           button2Text="לוח שיעורים"
-          button2Link="/plans"
+          button2Link="/#/plans"
         />
 
         <SplitSection
@@ -100,9 +100,9 @@ export default function Home() {
           text="שם כולל לשיטות ולטכניקות תנועה לטיפול, לתחזוקה ולשיפור תפקוד הגוף. באופן טבעי כשתחושת הגוף טובה לרוב גם תחושת הנפש טובה יותר. "
           leftImage={QigongImg}
           button1Text="קריאה נוספת"
-          button1Link="qigong"
+          button1Link="/#/qigong"
           button2Text="לוח שיעורים"
-          button2Link="/plans"
+          button2Link="/#/plans"
         />
 
         <div id="about-teacher-preview" className="page-wide-wrapper">
@@ -116,7 +116,7 @@ export default function Home() {
                 backgroundColor="var(--background)"
               >
                 <div>
-                  <a className="pill-button clickable" href={"/teacher"}>
+                  <a className="pill-button clickable" href={"/#/teacher"}>
                     על המורה
                   </a>
                 </div>
