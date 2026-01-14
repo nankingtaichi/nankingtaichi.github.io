@@ -22,7 +22,7 @@ export default function Contact() {
           <Title text={"לוח שיעורים"} />
 
           <BulletedLine icon={audienceIcon}>
-            השיעורים מתאימים לכל הרמות ומיועדים לגילאי 20 ומעלה.{" "}
+            השיעורים מתאימים לכל הרמות ומיועדים לגילאי 35 ומעלה.{" "}
           </BulletedLine>
           <BulletedLine icon={locationIcon}>
             השיעורים מתקיימים בדוג'ו ייעודי שממוקם{" "}
