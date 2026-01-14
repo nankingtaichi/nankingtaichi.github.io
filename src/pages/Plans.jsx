@@ -68,13 +68,11 @@ export default function Contact() {
             { icon: CalendarIcon, text: "ימי א' 19:30 - 18:00" },
             { icon: MoneyIcon, text: 'תשלום חודשי: 400 ש"ח' },
           ]}
-          index={0}
         />
         <LessonPlan
           title="שינג אי ו-פה קואה"
           img={shingiPhoto}
           items={[{ icon: CalendarIcon, text: "ימי ד' 20:00 - 18:00" }]}
-          index={1}
         />
         <LessonPlan
           title="שיעורים אישיים"
@@ -83,7 +81,6 @@ export default function Contact() {
             { icon: CalendarIcon, text: "כל ימי ושעות השבוע" },
             { icon: MoneyIcon, text: 'תשלום למפגש: 150 ש"ח' },
           ]}
-          index={2}
         />
       </div>
     </div>
@@ -102,9 +99,9 @@ function ContactButton({ children }) {
   );
 }
 
-function LessonPlan({ title, img, items, index }) {
+function LessonPlan({ title, img, items }) {
   return (
-    <FadeIn delay={index * 0.5} className="lesson-plan-frame">
+    <FadeIn delay={0.5} className="lesson-plan-frame">
       <BrushFrame
         className="lesson-plan-content"
         color="var(--primary)"
