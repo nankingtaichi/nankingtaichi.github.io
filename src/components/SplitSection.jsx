@@ -28,9 +28,9 @@ export default function SplitSection({
         <div className="button-row">
           <BrushFrame fill={false}>
             <div>
-              <div className="pill-button clickable" href={button1Link}>
+              <a className="pill-button clickable" href={button1Link}>
                 {button1Text}
-              </div>
+              </a>
             </div>
           </BrushFrame>
           <BrushFrame>
