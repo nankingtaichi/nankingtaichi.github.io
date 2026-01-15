@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import Banner from "../assets/graphics/navbar/Banner.svg";
 import BrushFrame from "./BrushFrame";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 export default function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
@@ -80,6 +82,13 @@ export default function AppNavbar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Nav.Link
+          href="https://www.youtube.com/@NankingTaiChi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faYoutube} className="nav-icon" />
+        </Nav.Link>
       </Container>
     </Navbar>
   );
